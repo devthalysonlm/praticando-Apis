@@ -40,6 +40,7 @@ class Carro {
     res.json(carros);
   });
 
+
   app.post('/carros', (req: Request, res: Response) => {
     const { marca, modelo, categoria, ano, quilometragem, valor } = req.body;
     const novoCarro = new Carro(marca, modelo, categoria, ano, quilometragem, valor);
@@ -54,4 +55,6 @@ class Carro {
     carros.push(novoCarro);
     res.status(201).json(novoCarro);
   });
+
+ 
   
